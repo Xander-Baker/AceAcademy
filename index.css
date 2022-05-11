@@ -81,19 +81,17 @@ body {
 }
 
 .loginBox *{
-    padding: 1%;
+
     width: 100%;
 }
 
 .loginBox h1{
-    padding: 3%;
     font-size: 3rem;
 }
 
-
 .singUpText{
     padding: 10%;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 #signUpLoad{
@@ -145,7 +143,7 @@ body {
     position: absolute;
     text-align: right;
     top: 4%;
-    right: 5%;
+    right: 5%; 
     width: 100%;
     font-size: 2rem;
     cursor: pointer;
@@ -161,6 +159,37 @@ body {
     visibility: hidden;
     position: absolute;
 }
+
+#signUp h1 {
+    font-size: 2em;
+}
+
+#signUp h2 {
+    font-size: 0.8em;
+}
+
+.radioFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.flexLable{
+    width: 49%;
+    height: 50%;
+}
+
+#typeSelect{
+    font-size: 1rem;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--blackGrey);
+    color: white
+}
+
+
 
 #landingPage {
     color: white;

@@ -57,14 +57,24 @@
                 </select>
                 <span id="courseSelect">
                 <h2 class="Lable">Course Enrollment</h2>
-                <input type="checkbox" id="course1" name="course1" value="1">
-                <label for="course1"><?php echo getCourseName($conn, 1); ?></label><br>
-                <input type="checkbox" id="course2" name="course2" value="2">
-                <label for="course2"><?php echo getCourseName($conn, 2); ?></label><br>
-                <input type="checkbox" id="course3" name="course3" value="3">
-                <label for="course3"><?php echo getCourseName($conn, 3); ?></label><br>
-                <input type="checkbox" id="course4" name="course4" value="4">
-                <label for="course4"><?php echo getCourseName($conn, 4); ?></label><br>
+                <div class="radioFlex">
+                    <label class="flexLable" for="course1"><?php echo getCourseName($conn, 1); ?>
+                        <input class="radioBut" type="checkbox" id="course1" name="course1" value="1">
+                    </label>
+                    
+                    <label class="flexLable" for="course2"><?php echo getCourseName($conn, 2); ?>
+                        <input class="radioBut" type="checkbox" id="course2" name="course2" value="2">
+                    </label>
+
+                    
+                    <label class="flexLable" for="course3"><?php echo getCourseName($conn, 3); ?>
+                        <input class="radioBut" type="checkbox" id="course3" name="course3" value="3">
+                    </label>
+
+                    <label class="flexLable" for="course4"><?php echo getCourseName($conn, 4); ?>
+                        <input class="radioBut" type="checkbox" id="course4" name="course4" value="4">
+                    </label>                 
+                </div>
                 </span>
                 <h2 id="forgotPassword">Forgot Password?</h2>
                 <input class="buttonPress" type="submit" value="Sign Up" name="submit"></input>
