@@ -59,11 +59,14 @@
     border-radius: 10px;
 }
 
-a:-webkit-any-link {
+
+a {
     color: white;
-    cursor: pointer;
-    text-decoration: underline;
 }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 div, h1, h2, h3, h4, h5, h6, p, span, img, hr{
     margin: 0;
@@ -138,9 +141,7 @@ body {
     filter: invert(1)
 }
 
-.courseText{
-    display: inline;
-}
+
 
 .courseVis {
     padding: 1vh;

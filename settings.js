@@ -3,6 +3,12 @@ var courses = document.getElementById("courses");
 var password = document.getElementById("password");
 var bugs = document.getElementById("bugs");
 
+function disableBodyScroll(){
+    const element = document.querySelector("#appBody");
+    element.classList.add("stopScroll");
+}
+
+disableBodyScroll();
 // account appear
 document.getElementById("accountClick").addEventListener("click", function(){
     courses.style.visibility = "hidden";
