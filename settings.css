@@ -192,3 +192,8 @@ form h2{
     visibility: hidden;
     position: absolute;
 }
+
+#content{
+    visibility: hidden;
+    position: absolute;
+}
