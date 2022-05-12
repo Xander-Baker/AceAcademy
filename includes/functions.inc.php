@@ -479,7 +479,6 @@ function displayGrades($conn, $id){
                     <p>Percentage</p>
                 </div>
             </div>
-            <hr style="width: 100%; border-radius: 10px;", size="1", color=grey>
             <div class="gradesSection">';
             $sql = "SELECT * FROM studentGrades WHERE courseID='$i' AND studentID='$id'";
             $data = mysqli_query($conn, $sql);

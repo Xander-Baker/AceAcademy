@@ -251,12 +251,12 @@ body {
 
 .courseTitleContain p{
     color: #ffffff;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .courseTitle{
-    font-size: 1em;
-    margin-bottom: 1vh;
+    font-size: 1.3em;
+    margin-bottom: 2vh;
 }
 
 .bottomStuff{
