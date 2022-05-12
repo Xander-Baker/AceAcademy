@@ -89,9 +89,9 @@
                                     $courseName = $row["name"];
 
                                     echo "<h2>$courseName</h2>";
-                                    echo "<form method='post' action=''>";
-                                    echo "<input type='hidden' name='courseId' value='$i'/>";
-                                    echo "<input type='submit' value='ENROL'>";
+                                    echo "<form style='margin-top: 0; margin-left: 0;' class='formClass' method='post' action=''>";
+                                    echo "<input class='buttonPress' type='hidden' name='courseId' value='$i'/>";
+                                    echo "<input class='buttonPress' type='submit' value='Request Enrolment '>";
                                     echo "</form>";    
                                 }
                             }
@@ -110,24 +110,17 @@
                 <p><b>Change Password</b></p>
             </div>
             <div class="main">
-            <form id="formBox" action="includes/changePass.inc.php" method="post">
+                <form id="formBox" action="includes/changePass.inc.php" method="post">
                     <h3 class="Lable">Current Password</h3>
-                    <input class="inputThing" type="text" name="curPwd"></input>
+                    <input class="inputThing" type="text" name="curPwd"></input><br>
                     <h3 class="Lable">New Password</h3>
-                    <input class="inputThing" type="text" name="newPwd"></input>
-                    <h3 class="Lable">New Password Repeat</h3>
-                    <input class="inputThing" type="text" name="newPwdR"></input>
+                    <input class="inputThing" type="text" name="newPwd"></input><br>
+                    <h3 class="Lable">Re-Enter Password</h3>
+                    <input class="inputThing" type="text" name="newPwdR"></input> <br>
                     <input class="buttonPress" type="submit" value="Login" name="submit"></input>
-                    </form>
+                </form>
             </div> 
         </div>
-        <div class="mainContent" id="bugs">
-            <div class="titleBit blob">
-                <p><b>Bug Reports</b></p>
-            </div>
-            <div class="main">
-            </div> 
-        </div>
-        <script src="settings.js"></script>
+        <script src="settingsStudent.js"></script>
     </body>
 </html>
