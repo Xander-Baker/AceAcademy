@@ -39,13 +39,18 @@
                     <p class="courseText" id="contentClick">Content</p>
                 </div>
             </div>
+            <div class="course">
+                <div class="courseVis">
+                    <a href="quizstart.php">Quiz</a>                    
+
+                </div>
+            </div>
             <div id="lastList" class="course">
                 <div class="courseVis">
                     <p class="courseText" id="passwordClick">Password</p>
                 </div>
             </div>
         </div>
-
         <div class="mainContent" id="account">
             <div class="titleBit blob">
                 <p><b>Account</b></p>
@@ -54,9 +59,9 @@
             <form id="formBox" action="includes/changeName.inc.php" method="post">
                 <h2>Change name</h2> <br>
                 <h3 class="Lable">Forename</h3>
-                <input class="inputThing" type="text" name="name"></input>
+                <input class="inputThing" type="text" name="name"></input><br>
                 <h3 class="Lable">Surname</h3>
-                <input class="inputThing" type="text" name="sName"></input>
+                <input class="inputThing" type="text" name="sName"></input><br>
                 <input class="buttonPress" type="submit" value="Login" name="submit"></input>
             </form>
             </div> 
@@ -134,7 +139,6 @@
                     <?php authoriseStudents($conn); ?>
                     <?php authoriseStudentsForm($conn); ?> 
                     <br>
-                    <a href="quizstart.php">Click here to create a quiz!</a>                    
                 </div>
             </div> 
         </div>

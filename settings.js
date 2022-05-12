@@ -51,6 +51,7 @@ document.getElementById("courseClick").addEventListener("click", function(){
 
 // content appear
 document.getElementById("contentClick").addEventListener("click", function(){
+    enableBodyScroll()
     account.style.visibility = "hidden";
     account.style.position = "absolute";
     courses.style.visibility = "hidden";

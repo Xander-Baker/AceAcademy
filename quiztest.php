@@ -12,6 +12,7 @@
 <head>
     <meta charset="utf-8">
     <title>TAKE QUIZ</title>
+    <link rel="stylesheet" href="quizTest.css">
 </head>
 <body>
 
@@ -37,6 +38,7 @@
     $ham = $row3["quizID"];
     $ham2 = $row3["quizName"];
     $course = $row3["courseID"];
+    echo "<div id='contentMargin'> ";
     //for($p = 0; $p < count($ham); $p++) {
         //if($ham[$p] == $quizNum){
             echo '<h1>'.$ham2.'</h1>' ;
@@ -60,9 +62,8 @@
 
 
 
-                echo '<p>question '.$questionNum.'</p>';
-                echo $row["question"]; ?>
-                <br>
+                echo '<h1>Question '.$questionNum.'</h1>';
+                echo "<h3>" . $row["question"] . "</h3>" ?>
                 <p>Select the correct answer below </p>
                 <?php foreach ($ans as $choice) {
                     $searchString = " ";
@@ -97,8 +98,9 @@
             //}
        }
     }
-
+    echo "<br>";
     echo '<button type="submit" name="butt" value="Submit"> Finish quiz </button>';
+    echo "<div> ";
 
 
         if(isset($_POST["butt"])) {

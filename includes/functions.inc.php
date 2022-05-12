@@ -751,13 +751,11 @@ function authoriseStudentsForm($conn) {
     
             while ($row = mysqli_fetch_array($data)) {
                 extract($row);
-                echo "$studentName";
-                echo "$studentSurname";
-                echo getCourseName($conn, $courseId);
-                echo "<form method='post' action=''>";
+                echo "<p>".$studentName ." " . $studentSurname. ": ". getCourseName($conn, $courseId);"</p>";
+                echo "<form style='margin-left 0; margin-top: 0;' method='post' action=''>";
                 echo "<input type='hidden' name='courseId' value='$courseId'/>";
                 echo "<input type='hidden' name='studentId' value='$studentId'/>";
-                echo "<input type='submit' value='AUTHORISE'/>";
+                echo "<input class='buttonPress' type='submit' value='Authorize'/>";
                 echo "</form>";
                 echo "<br/>";
 
@@ -765,7 +763,7 @@ function authoriseStudentsForm($conn) {
     
         }
         else {
-            echo "There are no enrollments currently to be authorised.";
+            echo "There are no enrollments currently to be authorize.";
         }
     }
 
