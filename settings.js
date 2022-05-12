@@ -1,8 +1,7 @@
 var account = document.getElementById("account");
 var courses = document.getElementById("courses");
-var password = document.getElementById("password");
 var content = document.getElementById("content");
-var bugs = document.getElementById("bugs");
+var password = document.getElementById("password");
 
 function disableBodyScroll(){
     const element = document.querySelector("#appBody");
@@ -14,16 +13,15 @@ disableBodyScroll();
 document.getElementById("accountClick").addEventListener("click", function(){
     courses.style.visibility = "hidden";
     courses.style.position = "absolute";
-
     password.style.visibility = "hidden";
     password.style.position = "absolute";
-
     content.style.position = "hidden";
     content.style.visibility = "absolute";
 
     account.style.position = "relative";
     account.style.visibility = "visible";
 });
+
 // course appear 
 document.getElementById("courseClick").addEventListener("click", function(){
     account.style.visibility = "hidden";
@@ -41,13 +39,8 @@ document.getElementById("courseClick").addEventListener("click", function(){
 document.getElementById("contentClick").addEventListener("click", function(){
     account.style.visibility = "hidden";
     account.style.position = "absolute";
-
-    bugs.style.visibility = "hidden";
-    bugs.style.position = "absolute";
-
     courses.style.visibility = "hidden";
     courses.style.position = "absolute";
-
     password.style.visibility = "hidden";
     password.style.position = "absolute";
 
@@ -60,15 +53,10 @@ document.getElementById("contentClick").addEventListener("click", function(){
 document.getElementById("passwordClick").addEventListener("click", function(){
     account.style.visibility = "hidden";
     account.style.position = "absolute";
-
-    bugs.style.visibility = "hidden";
-    bugs.style.position = "absolute";
-
     courses.style.visibility = "hidden";
-    courses.style.position = "absolute";
-    
-    content.style.visibility = "absolute";
+    courses.style.position = "absolute"; 
     content.style.position = "hidden";
+    content.style.visibility = "absolute";
 
     password.style.position = "relative"
     password.style.visibility = "visible";

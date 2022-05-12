@@ -155,7 +155,6 @@ form h2{
 .buttonPress{
     margin-top: 1%;
     font-size: 1.2em;
-    margin-left: 25%;
     width: 50%;
     text-align: center;
     cursor: pointer;
@@ -163,6 +162,33 @@ form h2{
     background-size: 100% auto;
     border-radius: 10px;
     color: white;
+}
+
+.buttonFile{
+    margin-top: 1%;
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
+    background-image: url(assets/blob.svg);
+    background-size: 100% auto;
+    border-radius: 10px;
+    color: white;
+}
+
+::-webkit-file-upload-button{
+    font-size: 1rem;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    color: white;
+}
+
+.radioButtonsFlex label{
+    font-size: 1.2em;
+}
+
+.titleLable{
+    font-size: 1.4em
 }
 
 .inputThing {
@@ -183,17 +209,8 @@ form h2{
     position: absolute;
 }
 
+
 #password{
-    visibility: hidden;
-    position: absolute;
-}
-
-#bugs{
-    visibility: hidden;
-    position: absolute;
-}
-
-#content{
     visibility: hidden;
     position: absolute;
 }
