@@ -101,7 +101,7 @@
                 </form>
             </div> 
         </div>
-        
+
         <div class="mainContent" id="content">
             <div class="titleBit blob">
                 <p><b>Add Content</b></p>
@@ -109,31 +109,35 @@
             <div class="main">
                 <?php uploadPost($conn);?>
                 <form method="post" action="" enctype="multipart/form-data">
-                    <label for="title">Title: </label>
-                    <input type="text" name="title"></input>
-                    <label for="uploadFile">Image to Upload</label>
-                    <input type="file" name="uploadImg"/>
+                    <label class="titleLable" for="title">Title: </label>
+                    <input class="inputThing" type="text" name="title"></input> <br>
+                    <label class="titleLable" for="uploadFile">Image to Upload</label>
+                    <input class="buttonFile" type="file" name="uploadImg"/>
                     <br/>
-                    <label for="content">Content: </label><br/>
+                    <label class="titleLable" for="content">Content: </label><br/>
 				    <textarea name="content" cols="80" rows="10"></textarea>
-                    <input type="radio" id="webdev" name="courseId" value="1">
-                    <label for="webdev">Web Dev</label><br>
-                    <input type="radio" id="psych" name="courseId" value="2">
-                    <label for="psych">Psychology</label><br>
-                    <input type="radio" id="maths" name="courseId" value="3">
-                    <label for="maths">Maths</label><br>
-                    <input type="radio" id="banking" name="courseId" value="4">
-                    <label for="banking">Banking</label><br>
-                    <input type="submit" value="UPLOAD POST"/>
+                    <br>
+                    <div class="radioButtonsFlex">
+                        <input type="radio" id="webdev" name="courseId" value="1">
+                        <label for="webdev">Web Dev</label><br>
+                        <input type="radio" id="psych" name="courseId" value="2">
+                        <label for="psych">Psychology</label><br>
+                        <input type="radio" id="maths" name="courseId" value="3">
+                        <label for="maths">Maths</label><br>
+                        <input type="radio" id="banking" name="courseId" value="4">
+                        <label for="banking">Banking</label><br>                        
+                    </div>
+                    <input class="buttonPress" type="submit" value="Upload Post"/>
                 </form>
-                <?php authoriseStudents($conn); ?>
-                <?php authoriseStudentsForm($conn); ?>
-                <a href="quizstart.php">Click here to create a quiz!</a>
+                <br>
+                <div style="margin-left: 2%;">
+                    <?php authoriseStudents($conn); ?>
+                    <?php authoriseStudentsForm($conn); ?> 
+                    <br>
+                    <a href="quizstart.php">Click here to create a quiz!</a>                    
+                </div>
             </div> 
         </div>
-
-
-        
         <script src="settings.js"></script>     
     </body>
 </html>

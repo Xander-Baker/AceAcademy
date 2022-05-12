@@ -3,14 +3,27 @@ var courses = document.getElementById("courses");
 var content = document.getElementById("content");
 var password = document.getElementById("password");
 
+const goToTop = () => window.scrollTo(0, 0);
+
+
 function disableBodyScroll(){
     const element = document.querySelector("#appBody");
     element.classList.add("stopScroll");
+    goToTop();
 }
+
+
+
+function enableBodyScroll(){
+    const element = document.querySelector("#appBody");
+    element.classList.remove("stopScroll");
+}
+  
 
 disableBodyScroll();
 // account appear
 document.getElementById("accountClick").addEventListener("click", function(){
+    disableBodyScroll();
     courses.style.visibility = "hidden";
     courses.style.position = "absolute";
     password.style.visibility = "hidden";
@@ -24,6 +37,7 @@ document.getElementById("accountClick").addEventListener("click", function(){
 
 // course appear 
 document.getElementById("courseClick").addEventListener("click", function(){
+    disableBodyScroll();
     account.style.visibility = "hidden";
     account.style.position = "absolute";
     password.style.visibility = "hidden";
@@ -37,6 +51,7 @@ document.getElementById("courseClick").addEventListener("click", function(){
 
 // content appear
 document.getElementById("contentClick").addEventListener("click", function(){
+    enableBodyScroll();
     account.style.visibility = "hidden";
     account.style.position = "absolute";
     courses.style.visibility = "hidden";
@@ -51,6 +66,7 @@ document.getElementById("contentClick").addEventListener("click", function(){
 
 // password appear
 document.getElementById("passwordClick").addEventListener("click", function(){
+    disableBodyScroll();
     account.style.visibility = "hidden";
     account.style.position = "absolute";
     courses.style.visibility = "hidden";
