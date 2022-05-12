@@ -56,24 +56,28 @@ if(isset($_POST['finish'])) {
 <head>
     <meta charset="utf-8">
     <title>CREATE QUIZ</title>
+    <link rel="st">
 </head>
 
 <body>
-<form action = "createquiz.php" method="post">
-    <p>Enter question below</p>
-    <input type="text" name="question">
-    <p>Enter correct answer below</p>
-    <input type="text" name="answer1">
-    <p>Enter answer below</p>
-    <input type="text" name="answer2">
-    <p>Enter answer below</p>
-    <input type="text" name="answer3">
-    <p>Enter answer below</p>
-    <input type="text" name="answer4">
-    <br>
-    <br>
-    <button type="submit" name="enter"> Add another question </button>
-    <button type="submit" name="finish"> Finish Quiz </button>
-</form>
+    <div>
+        
+    </div>
+    <form action = "createquiz.php" method="post">
+        <p>Enter question below</p>
+        <input type="text" name="question">
+        <p>Enter correct answer below</p>
+        <input type="text" name="answer1">
+        <p>Enter answer below</p>
+        <input type="text" name="answer2">
+        <p>Enter answer below</p>
+        <input type="text" name="answer3">
+        <p>Enter answer below</p>
+        <input type="text" name="answer4">
+        <br>
+        <br>
+        <button type="submit" name="enter"> Add another question </button>
+        <button type="submit" name="finish"> Finish Quiz </button>
+    </form>
 </body>
 </html>

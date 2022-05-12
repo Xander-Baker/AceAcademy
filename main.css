@@ -48,6 +48,10 @@
     color: white;
 }
 
+#topBarLinks a{
+    color: black;
+}
+
 .title a{
     color: black;
 }
