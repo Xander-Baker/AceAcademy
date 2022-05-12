@@ -121,7 +121,7 @@ a:active { text-decoration: none; }
 .main {
 
     width: 100%;
-    min-height: 70vh;
+    min-height: 50vh;
     border: 1px solid black;
     border-radius: 0 0 10px 10px;
 }
