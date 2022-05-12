@@ -30,17 +30,11 @@
     --aliWhite: #f2f2f2;
 }
 
-@font-face {
-    font-family: fileFont;
-    src: url(Assets/AvenirLight.ttf);
-}
 
-/* width */
 ::-webkit-scrollbar {
     width: 1vw;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     border-radius: 10px;
 }
@@ -50,13 +44,14 @@
     border-radius: 10px;
 }
 
-#sideBar a {
+#profileInvis a{
     color: white;
 }
 
-a{
+.title a{
     color: black;
 }
+
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
@@ -249,41 +244,18 @@ body {
     margin-top: 3vh;
 }
 
-.courseVis:hover p{
-    color: var(--skinRed);
-    display: inline;
-}
 
 .courseText{
     color: white;
     display: inline;
 }
 
+.courseText:hover{
+    color: salmon;
+}
+
 .courseVis{
     cursor: pointer;
-}
-
-.course:hover .courseDropDown {
-    cursor: pointer;
-    visibility: visible;
-    position: relative;
-}
-
-.downArrow{
-    color: white;
-    margin-left: 1vh;
-    transform: rotate(90deg); 
-    display: inline-block;
-}
-
-.courseDropDown{
-    visibility: hidden;
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
 }
 
 .courseDropDownText{
@@ -291,10 +263,7 @@ body {
     padding-left: 3vh;
 }
 
-.courseDropDownText:hover{
-    color: var(--skinRed);
-    cursor: pointer;
-}
+
 
 
 #quickLinks{
@@ -437,7 +406,6 @@ body {
 }
 
 .size{
-
     width: 16%;
 }
 
@@ -554,4 +522,8 @@ body {
 
 .inner p{
     padding: 1vh;
+}
+
+.titleStuff{
+    margin-left: 28%;
 }

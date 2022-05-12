@@ -57,10 +57,9 @@ if(isset($_POST['finish'])) {
     <meta charset="utf-8">
     <title>CREATE QUIZ</title>
 </head>
+
 <body>
 <form action = "createquiz.php" method="post">
-
-
     <p>Enter question below</p>
     <input type="text" name="question">
     <p>Enter correct answer below</p>

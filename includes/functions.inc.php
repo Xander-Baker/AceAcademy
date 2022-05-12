@@ -822,3 +822,39 @@ function showQuizzes($conn, $courseId){
     }
 }
 
+function showCoursePage($conn, $courseID, $courseName){
+    
+    echo '            
+    <div id="'. $courseName.'"> '; 
+    displayPosts($conn, $courseID);
+    echo '
+    <div class="article">
+            <h1 class="downLoadsTitle">
+                Downloads
+            </h1>
+            <div class="downLoadArea">
+                <hr style="width: 100%; border-radius: 10px;", size="1", color=grey>
+                <div class="downLoadAreaTitle">
+                    <div class="name">
+                        <p>Name</p>
+                    </div>
+                    <div class="uploaded">
+                        <p>Uploaded</p>                        
+                    </div>        
+                    <div class="size">
+                        <p>Size</p>
+                    </div>        
+                    <div class="author">
+                        <p>Author</p>
+                    </div>
+                </div>';
+
+                displayResources($conn, $courseID);
+                echo '
+                <hr style="width: 100%; border-radius: 10px;", size="1", color=grey>
+                </div>
+            </div>
+        </div>
+    </div>';
+}
+

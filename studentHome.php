@@ -44,7 +44,7 @@
                 <div class="course">
                     <div class="courseVis">
                         <img src="assets/online-course.png">
-                        <a href="main.php" class="courseText">Courses</a>
+                        <a href="main1.php" class="courseText">Courses</a>
                     </div>
                 </div>
                 <div class="course">
@@ -83,20 +83,20 @@
                             $count ++;
                             $link = 'main.php';
                             if($i == 1){
-                                echo '<a href="main.php">';
+                                echo '<a href="main1.php">';
                                 echo'<div class="coruseBox wave-no-border" >';
                             }
                             if($i == 2){
-                                echo '<a href="main.php">';
+                                echo '<a href="main2.php">';
 
                                 echo'<div class="coruseBox bluePurple-no-border">';
                             }
                             if($i == 3){
-                                echo '<a href="main.php">';
+                                echo '<a href="main3.php">';
                                 echo'<div class="coruseBox triangle-no-border">';
                             }
                             if($i == 4){
-                                echo '<a href="main.php">';
+                                echo '<a href="main4.php">';
                                 echo'<div class="coruseBox jag-no-border">';
                             }
                             echo '
