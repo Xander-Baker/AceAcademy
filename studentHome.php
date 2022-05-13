@@ -44,7 +44,7 @@
                 <div class="course">
                     <div class="courseVis">
                         <img src="assets/online-course.png">
-                        <p class="courseText">Courses</p>
+                        <a href="main1.php" class="courseText">Courses</a>
                     </div>
                 </div>
                 <div class="course">
@@ -81,16 +81,22 @@
                     for($i = 1; $i<=4; $i++){
                         if(courseCheck($conn, $i, $_SESSION["id"])){
                             $count ++;
+                            $link = 'main.php';
                             if($i == 1){
-                                echo'<div class="coruseBox wave-no-border">';
+                                echo '<a href="main1.php">';
+                                echo'<div class="coruseBox wave-no-border" >';
                             }
                             if($i == 2){
+                                echo '<a href="main2.php">';
+
                                 echo'<div class="coruseBox bluePurple-no-border">';
                             }
                             if($i == 3){
+                                echo '<a href="main3.php">';
                                 echo'<div class="coruseBox triangle-no-border">';
                             }
                             if($i == 4){
+                                echo '<a href="main4.php">';
                                 echo'<div class="coruseBox jag-no-border">';
                             }
                             echo '
@@ -99,17 +105,8 @@
                                         <p>'; echo getCourseDesc($conn, $i); echo '</p>
                                         
                                     </div>
-                                    <div class="courseInformation">
-                                        <img src="assets/blank-page.png">
-                                        <p>63</p>
-                                        <hr style="width: 10%; border-radius: 10px; transform: rotate(90deg);", size="1", color=grey>
-                                        <img src="assets/test-quiz.png">
-                                        <p>3</p>
-                                        <hr style="width: 10%; border-radius: 10px; transform: rotate(90deg);", size="1", color=grey>
-                                        <img src="assets/icons8-user-30.png">
-                                        <p>70</p>
-                                    </div>
                                 </div>';
+                            echo '</a>';
                         }
                     }
                     if($count == 0){

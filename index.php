@@ -29,7 +29,7 @@
                 <h2 class="Lable">Email</h2>
                 <input class="inputThing" type="text" name="email"></input>
                 <h2 class="Lable">Password</h2>
-                <input class="inputThing" type="text" name="pwd"></input>
+                <input class="inputThing" type="password" name="pwd"></input>
                 <h2 id="forgotPassword">Forgot Password?</h2>
                 <input class="buttonPress" type="submit" value="Login" name="submit"></input>
             </form>

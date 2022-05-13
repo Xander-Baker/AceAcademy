@@ -19,10 +19,10 @@
         <link rel="stylesheet" href="settings.css">
         <link rel="icon" href="assets/favicon.svg">
     </head>
-    <body>
+    <body id="appBody">
         <div id="sideBar">
-            <div id="sideBarLogo">
-                <p>Ace <b>Academy</b></p>
+            <div id="titleSet">
+                <h6>Settings ⚙️</h6>
             </div>
             <div class="course">
                 <div class="courseVis">
@@ -31,32 +31,28 @@
             </div>
             <div class="course">
                 <div class="courseVis">
-                    <p class="courseText" id="courseClick">Courses</p>
+                    <p class="courseText" id="courseClick">Files</p>
                 </div>
             </div>
             <div class="course">
+                <div class="courseVis">
+                    <p class="courseText" id="contentClick">Content</p>
+                </div>
+            </div>
+            <div class="course">
+                <div class="courseVis">
+                    <a href="quizstart.php">Quiz</a>                    
+
+                </div>
+            </div>
+            <div  class="course">
                 <div class="courseVis">
                     <p class="courseText" id="passwordClick">Password</p>
                 </div>
             </div>
-            <div class="course">
+            <div id="lastList" class="course">
                 <div class="courseVis">
-                    <p class="courseText" id="bugClick">Bug reports</p>
-                </div>
-            </div>
-            <div class="course">
-                <div class="courseVis">
-                    <p class="courseText">Raw Data</p>
-                </div>
-            </div>
-            <div class="course">
-                <div class="courseVis">
-                    <p class="courseText">Tutors</p>
-                </div>
-            </div>
-            <div class="course">
-                <div class="courseVis">
-                    <p class="courseText">Contact</p>
+                   <a href="index.php" class="courseText" id="passwordClick">Log-Out</a>
                 </div>
             </div>
         </div>
@@ -66,90 +62,91 @@
             </div>
             <div class="main">
             <form id="formBox" action="includes/changeName.inc.php" method="post">
-                <h1>Change name</h1>
-                <h2 class="Lable">Forename</h2>
-                <input class="inputThing" type="text" name="name"></input>
-                <h2 class="Lable">Surname</h2>
-                <input class="inputThing" type="text" name="sName"></input>
+                <h2>Change name</h2> <br>
+                <h3 class="Lable">Forename</h3>
+                <input class="inputThing" type="text" name="name"></input><br>
+                <h3 class="Lable">Surname</h3>
+                <input class="inputThing" type="text" name="sName"></input><br>
                 <input class="buttonPress" type="submit" value="Login" name="submit"></input>
             </form>
             </div> 
         </div>
+
         <div class="mainContent" id="courses">
             <div class="titleBit blob">
-                <p><b>Courses</b></p>
+                <p><b>Upload Files</b></p>
             </div>
             <div class="main">
-            <?php uploadResource($conn);?>
-
-            <form method="post" action="" enctype="multipart/form-data">
-                <label for="uploadFile">File to Upload</label>
-                <input type="file" name="uploadFile"/>
-                <br/>
-                <input type="radio" id="webdev" name="courseId" value="1">
-                <label for="webdev">Web Dev</label><br>
-                <input type="radio" id="psych" name="courseId" value="2">
-                <label for="psych">Psychology</label><br>
-                <input type="radio" id="maths" name="courseId" value="3">
-                <label for="maths">Maths</label><br>
-                <input type="radio" id="banking" name="courseId" value="4">
-                <label for="banking">Banking</label><br>
-                <input type="submit" value="UPLOAD FILE"/>
-            </form>
-
-            <br/>
-            <br/>
-
-            <?php uploadPost($conn);?>
-            <form method="post" action="" enctype="multipart/form-data">
-                <label for="title">Title: </label>
-                <input type="text" name="title"></input>
-                <label for="uploadFile">Image to Upload</label>
-                <input type="file" name="uploadImg"/>
-                <br/>
-                <label for="content">Content: </label><br/>
-				<textarea name="content" cols="80" rows="10"></textarea>
-                <input type="radio" id="webdev" name="courseId" value="1">
-                <label for="webdev">Web Dev</label><br>
-                <input type="radio" id="psych" name="courseId" value="2">
-                <label for="psych">Psychology</label><br>
-                <input type="radio" id="maths" name="courseId" value="3">
-                <label for="maths">Maths</label><br>
-                <input type="radio" id="banking" name="courseId" value="4">
-                <label for="banking">Banking</label><br>
-                <input type="submit" value="UPLOAD POST"/>
-            </form>
-            <?php authoriseStudents($conn); ?>
-            <?php authoriseStudentsForm($conn); ?>
-            <a href="quizstart.php">Click here to create a quiz!</a>
+                <?php uploadResource($conn);?>
+                <form method="post" action="" enctype="multipart/form-data">
+                    <label class="titleLable" for="uploadFile">File to Upload: </label>
+                    <input class="buttonFile" type="file" name="uploadFile" value="Select File :" />
+                    <div class="radioButtonsFlex">
+                        <input type="radio" id="webdev" name="courseId" value="1">
+                        <label for="webdev">Web Dev</label><br>
+                        <input type="radio" id="psych" name="courseId" value="2">
+                        <label for="psych">Psychology</label><br>
+                        <input type="radio" id="maths" name="courseId" value="3">
+                        <label for="maths">Maths</label><br>
+                        <input type="radio" id="banking" name="courseId" value="4">
+                        <label for="banking">Banking</label>
+                    </div>
+                    <input class="buttonPress" type="submit" value="Upload File"/>
+                </form>
             </div> 
         </div>
         <div class="mainContent" id="password">
             <div class="titleBit blob">
-                <p><b>Password</b></p>
+                <p><b>Change Password</b></p>
             </div>
             <div class="main">
-            <form id="formBox" action="includes/changePass.inc.php" method="post">
-                    <h1>Change Password</h1>
-                    <h2 class="Lable">Current Password</h2>
-                    <input class="inputThing" type="text" name="curPwd"></input>
-                    <h2 class="Lable">New Password</h2>
-                    <input class="inputThing" type="text" name="newPwd"></input>
-                    <h2 class="Lable">New Password Repeat</h2>
-                    <input class="inputThing" type="text" name="newPwdR"></input>
+                <form id="formBox" action="includes/changePass.inc.php" method="post">
+                    <h3 class="Lable">Current Password</h3>
+                    <input class="inputThing" type="text" name="curPwd"></input> <br>
+                    <h3 class="Lable">New Password</h3>
+                    <input class="inputThing" type="text" name="newPwd"></input><br>
+                    <h3 class="Lable">Re-enter Password</h3>
+                    <input class="inputThing" type="text" name="newPwdR"></input><br>
                     <input class="buttonPress" type="submit" value="Login" name="submit"></input>
-                    </form>
+                </form>
             </div> 
         </div>
-        <div class="mainContent" id="bugs">
+
+        <div class="mainContent" id="content">
             <div class="titleBit blob">
-                <p><b>Bug Reports</b></p>
+                <p><b>Add Content</b></p>
             </div>
             <div class="main">
+                <?php uploadPost($conn);?>
+                <form method="post" action="" enctype="multipart/form-data">
+                    <label class="titleLable" for="title">Title: </label>
+                    <input class="inputThing" type="text" name="title"></input> <br>
+                    <label class="titleLable" for="uploadFile">Image to Upload</label>
+                    <input class="buttonFile" type="file" name="uploadImg"/>
+                    <br/>
+                    <label class="titleLable" for="content">Content: </label><br/>
+				    <textarea name="content" cols="80" rows="10"></textarea>
+                    <br>
+                    <div class="radioButtonsFlex">
+                        <input type="radio" id="webdev" name="courseId" value="1">
+                        <label for="webdev">Web Dev</label><br>
+                        <input type="radio" id="psych" name="courseId" value="2">
+                        <label for="psych">Psychology</label><br>
+                        <input type="radio" id="maths" name="courseId" value="3">
+                        <label for="maths">Maths</label><br>
+                        <input type="radio" id="banking" name="courseId" value="4">
+                        <label for="banking">Banking</label><br>                        
+                    </div>
+                    <input class="buttonPress" type="submit" value="Upload Post"/>
+                </form>
+                <br>
+                <div style="margin-left: 2%;">
+                    <?php authoriseStudents($conn); ?>
+                    <?php authoriseStudentsForm($conn); ?> 
+                    <br>
+                </div>
             </div> 
         </div>
-        <script src="settings.js"></script>
-
-        
+        <script src="settings.js"></script>     
     </body>
 </html>

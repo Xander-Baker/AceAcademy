@@ -59,11 +59,15 @@
     border-radius: 10px;
 }
 
-a:-webkit-any-link {
+
+a {
     color: white;
-    cursor: pointer;
-    text-decoration: underline;
 }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { color:salmon }
+a:active { text-decoration: none; }
+
 
 div, h1, h2, h3, h4, h5, h6, p, span, img, hr{
     margin: 0;
@@ -138,9 +142,7 @@ body {
     filter: invert(1)
 }
 
-.courseText{
-    display: inline;
-}
+
 
 .courseVis {
     padding: 1vh;
@@ -250,12 +252,12 @@ body {
 
 .courseTitleContain p{
     color: #ffffff;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .courseTitle{
-    font-size: 1em;
-    margin-bottom: 1vh;
+    font-size: 1.3em;
+    margin-bottom: 2vh;
 }
 
 .bottomStuff{
@@ -557,7 +559,6 @@ body {
 
 #quizMenu{
     width: 100%;
-    margin-top: 4vh;
     border-radius: 10px;
 }
 
@@ -577,7 +578,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
 }
 

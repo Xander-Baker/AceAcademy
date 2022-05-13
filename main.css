@@ -30,17 +30,11 @@
     --aliWhite: #f2f2f2;
 }
 
-@font-face {
-    font-family: fileFont;
-    src: url(Assets/AvenirLight.ttf);
-}
 
-/* width */
 ::-webkit-scrollbar {
     width: 1vw;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     border-radius: 10px;
 }
@@ -49,6 +43,23 @@
     background: var(--skinRed);
     border-radius: 10px;
 }
+
+#profileInvis a{
+    color: white;
+}
+
+#topBarLinks a{
+    color: black;
+}
+
+.title a{
+    color: black;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 
 div, h1, h2, h3, h4, h5, h6, p, span, img, hr{
@@ -88,12 +99,11 @@ body {
 
 #topBarLinks{
     margin-left: auto;
-
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     align-content: space-between;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
 }
 
@@ -166,15 +176,11 @@ body {
 #profile{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     cursor: pointer;
 }
 
-#name{
-    margin-left: 2vh;
-}
 
 #profileVis:hover p{
     color: var(--skinRed);
@@ -196,7 +202,7 @@ body {
 }
 
 #profileImg p{
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
 #profileVis{
@@ -207,7 +213,7 @@ body {
 }
 
 #profileInvis {
-    margin-left: 70%;
+    margin-left: 30%;
     width: 100%;
     padding-top: 1vh;
     display: flex;
@@ -242,41 +248,18 @@ body {
     margin-top: 3vh;
 }
 
-.courseVis:hover p{
-    color: var(--skinRed);
-    display: inline;
-}
 
 .courseText{
     color: white;
     display: inline;
 }
 
+.courseText:hover{
+    color: salmon;
+}
+
 .courseVis{
     cursor: pointer;
-}
-
-.course:hover .courseDropDown {
-    cursor: pointer;
-    visibility: visible;
-    position: relative;
-}
-
-.downArrow{
-    color: white;
-    margin-left: 1vh;
-    transform: rotate(90deg); 
-    display: inline-block;
-}
-
-.courseDropDown{
-    visibility: hidden;
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
 }
 
 .courseDropDownText{
@@ -284,9 +267,8 @@ body {
     padding-left: 3vh;
 }
 
-.courseDropDownText:hover{
-    color: var(--skinRed);
-    cursor: pointer;
+.activeLinkThing{
+    color: salmon;
 }
 
 
@@ -430,7 +412,6 @@ body {
 }
 
 .size{
-
     width: 16%;
 }
 
@@ -547,4 +528,8 @@ body {
 
 .inner p{
     padding: 1vh;
+}
+
+.titleStuff{
+    margin-left: 28%;
 }

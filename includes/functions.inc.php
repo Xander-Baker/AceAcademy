@@ -479,7 +479,6 @@ function displayGrades($conn, $id){
                     <p>Percentage</p>
                 </div>
             </div>
-            <hr style="width: 100%; border-radius: 10px;", size="1", color=grey>
             <div class="gradesSection">';
             $sql = "SELECT * FROM studentGrades WHERE courseID='$i' AND studentID='$id'";
             $data = mysqli_query($conn, $sql);
@@ -752,13 +751,11 @@ function authoriseStudentsForm($conn) {
     
             while ($row = mysqli_fetch_array($data)) {
                 extract($row);
-                echo "$studentName";
-                echo "$studentSurname";
-                echo getCourseName($conn, $courseId);
-                echo "<form method='post' action=''>";
+                echo "<p>".$studentName ." " . $studentSurname. ": ". getCourseName($conn, $courseId);"</p>";
+                echo "<form style='margin-left 0; margin-top: 0;' method='post' action=''>";
                 echo "<input type='hidden' name='courseId' value='$courseId'/>";
                 echo "<input type='hidden' name='studentId' value='$studentId'/>";
-                echo "<input type='submit' value='AUTHORISE'/>";
+                echo "<input class='buttonPress' type='submit' value='Authorize'/>";
                 echo "</form>";
                 echo "<br/>";
 
@@ -766,7 +763,7 @@ function authoriseStudentsForm($conn) {
     
         }
         else {
-            echo "There are no enrollments currently to be authorised.";
+            echo "There are no enrollments currently to be authorize.";
         }
     }
 
@@ -823,5 +820,41 @@ function showQuizzes($conn, $courseId){
     } else {
         echo"<p>No quizzes to show</p>";
     }
+}
+
+function showCoursePage($conn, $courseID, $courseName){
+    
+    echo '            
+    <div id="'. $courseName.'"> '; 
+    displayPosts($conn, $courseID);
+    echo '
+    <div class="article">
+            <h1 class="downLoadsTitle">
+                Downloads
+            </h1>
+            <div class="downLoadArea">
+                <hr style="width: 100%; border-radius: 10px;", size="1", color=grey>
+                <div class="downLoadAreaTitle">
+                    <div class="name">
+                        <p>Name</p>
+                    </div>
+                    <div class="uploaded">
+                        <p>Uploaded</p>                        
+                    </div>        
+                    <div class="size">
+                        <p>Size</p>
+                    </div>        
+                    <div class="author">
+                        <p>Author</p>
+                    </div>
+                </div>';
+
+                displayResources($conn, $courseID);
+                echo '
+                <hr style="width: 100%; border-radius: 10px;", size="1", color=grey>
+                </div>
+            </div>
+        </div>
+    </div>';
 }
 

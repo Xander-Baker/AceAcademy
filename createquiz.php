@@ -56,25 +56,35 @@ if(isset($_POST['finish'])) {
 <head>
     <meta charset="utf-8">
     <title>CREATE QUIZ</title>
+    <link rel="stylesheet" href="quizStart.css">
 </head>
+
 <body>
-<form action = "createquiz.php" method="post">
-
-
-    <p>Enter question below</p>
-    <input type="text" name="question">
-    <p>Enter correct answer below</p>
-    <input type="text" name="answer1">
-    <p>Enter answer below</p>
-    <input type="text" name="answer2">
-    <p>Enter answer below</p>
-    <input type="text" name="answer3">
-    <p>Enter answer below</p>
-    <input type="text" name="answer4">
-    <br>
-    <br>
-    <button type="submit" name="enter"> Add another question </button>
-    <button type="submit" name="finish"> Finish Quiz </button>
-</form>
+    <div class="mainContent">
+        <form action = "createquiz.php" method="post">
+            <div class="titleBit blob">
+                <h3 style="margin-left: 2%;">Create Question</h3>
+            </div>
+            <div class="main">
+                <p>Enter Question Below</p>
+                <input class="inputThing" type="text" name="question">
+                <p>Enter Correct Answer Below</p>
+                <input class="inputThing" type="text" name="answer1">
+                <p>Enter answer below</p>
+                <input class="inputThing" type="text" name="answer2">
+                <p>Enter Answer Below</p>
+                <input class="inputThing" type="text" name="answer3">
+                <p>Enter Answer Below</p>
+                <input class="inputThing" type="text" name="answer4">
+                <br>
+                <br>
+                <button class='buttonPress' type="submit" name="enter"> Add Question </button>
+                <button class='buttonPress' type="submit" name="finish"> Finish Quiz </button>
+            </div>
+        </form>        
+    </div>
+    <div id="svgStuff">
+    
+    </div>
 </body>
 </html>

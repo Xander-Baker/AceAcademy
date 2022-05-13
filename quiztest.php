@@ -12,6 +12,7 @@
 <head>
     <meta charset="utf-8">
     <title>TAKE QUIZ</title>
+    <link rel="stylesheet" href="quizTest.css">
 </head>
 <body>
 
@@ -37,9 +38,11 @@
     $ham = $row3["quizID"];
     $ham2 = $row3["quizName"];
     $course = $row3["courseID"];
+    echo '<h1 id="quizTitle">'.$ham2.'</h1>' ;
+    echo "<div id='contentMargin'> ";
+    echo "  <div class='content'>";
     //for($p = 0; $p < count($ham); $p++) {
         //if($ham[$p] == $quizNum){
-            echo '<h1>'.$ham2.'</h1>' ;
         //}
     //}
 
@@ -58,25 +61,32 @@
                 $name = 'Button+'.strval($questionNum);
                 $val = 'test+'.strval($answerNum);
 
-
-
-                echo '<p>question '.$questionNum.'</p>';
-                echo $row["question"]; ?>
+                echo "<div class='questionBox'>";
+                echo "<div class='quizTitle'>";
+                    echo '<h1>Question '.$questionNum.'</h1>';
+                echo "</div>";
+                echo "<div class='main'>";
+                echo "<h3>" . $row["question"] . "</h3>" ?>
                 <br>
-                <p>Select the correct answer below </p>
+                <p>Select the correct answer below: </p>
+                <br> 
+                <div class="flexStuff"> 
                 <?php foreach ($ans as $choice) {
                     $searchString = " ";
                     $replaceString = "";
                     $choice2 = str_replace($searchString, $replaceString, $choice);
                     ?>
+                    <div class="row">
 
                         <input type=radio name=<?php echo $name ?> value=<?php echo $choice2?>>
                     <label for=<?php echo $name ?>><?php echo $choice ?></label>
+                    </div>
                     <?php
 
                     $answerNum += 1;
                     $val = 'test+'.strval($answerNum);
                 }
+                echo "</div>";
 
                 if (isset($_POST[$name])) {
 
@@ -93,12 +103,15 @@
                 $choice3 = str_replace($searchString, $replaceString, $row['answer1']);
                 $correctArray[$questionNum] = $choice3;
                 $questionNum += 1;
-
+                echo "<br>";
+                echo "</div>";
+                echo "</div>";
             //}
        }
     }
-
-    echo '<button type="submit" name="butt" value="Submit"> Finish quiz </button>';
+    echo "<br>";
+    echo '<button class="buttonSub" type="submit" name="butt" value="Submit"> Finish quiz </button>';
+    echo "</div> ";
 
 
         if(isset($_POST["butt"])) {
@@ -139,8 +152,6 @@
                 echo'</form>';
 
     ?>
-
-<br>
 
 </body>
 </html>
