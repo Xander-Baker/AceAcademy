@@ -42,8 +42,10 @@ if(isset($_POST['finish'])) {
                     </select><br>
                     <button class='buttonPress' type="submit" name="finish"> Create Quiz </button>        
                 </div>
-
         </form>
+    </div>
+    <div id="svgStuff">
+    
     </div>
 </body>
 </html>

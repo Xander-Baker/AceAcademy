@@ -55,13 +55,23 @@
             <?php
             for($i=1; $i <= 4; $i++){
                 if (courseCheck($conn, $i, $_SESSION["id"])){
-                    echo '              
-                    <div class="course">
-                        <div class="courseVis">
-                            <a href="main' . $i . '.php" class="courseText">';   echo getCourseName($conn, $i);
-                            echo '</a>
-                        </div>
-                    </div>';
+                    if ($i == 1){
+                        echo '              
+                        <div class="course">
+                            <div class="courseVis">
+                                <a href="main' . $i . '.php" class="courseText activeLinkThing">';   echo getCourseName($conn, $i);
+                                echo '</a>
+                            </div>
+                        </div>';
+                    } else{
+                        echo '              
+                        <div class="course">
+                            <div class="courseVis">
+                                <a href="main' . $i . '.php" class="courseText">';   echo getCourseName($conn, $i);
+                                echo '</a>
+                            </div>
+                        </div>';                        
+                    }
                 }                
             }
             ?>

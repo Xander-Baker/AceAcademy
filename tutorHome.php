@@ -45,9 +45,14 @@
 
                 </div>
             </div>
-            <div id="lastList" class="course">
+            <div  class="course">
                 <div class="courseVis">
                     <p class="courseText" id="passwordClick">Password</p>
+                </div>
+            </div>
+            <div id="lastList" class="course">
+                <div class="courseVis">
+                   <a href="index.php" class="courseText" id="passwordClick">Log-Out</a>
                 </div>
             </div>
         </div>
@@ -101,7 +106,7 @@
                     <h3 class="Lable">New Password</h3>
                     <input class="inputThing" type="text" name="newPwd"></input><br>
                     <h3 class="Lable">Re-enter Password</h3>
-                    <input class="inputThing" type="text" name="newPwdR"></input>
+                    <input class="inputThing" type="text" name="newPwdR"></input><br>
                     <input class="buttonPress" type="submit" value="Login" name="submit"></input>
                 </form>
             </div> 

@@ -51,17 +51,26 @@
             <hr style="width: 90%; border-radius: 10px; margin-left: 5%; margin-bottom: 1vh; margin-top: 1vh;", size="1", color=grey>
             
             <!-- This Should be conditional, only loading the stuff if needed, so if the person if subsrivved to the course -->
-
             <?php
             for($i=1; $i <= 4; $i++){
                 if (courseCheck($conn, $i, $_SESSION["id"])){
-                    echo '              
-                    <div class="course">
-                        <div class="courseVis">
-                            <a href="main' . $i . '.php" class="courseText">';   echo getCourseName($conn, $i);
-                            echo '</a>
-                        </div>
-                    </div>';
+                    if ($i == 2){
+                        echo '              
+                        <div class="course">
+                            <div class="courseVis">
+                                <a href="main' . $i . '.php" class="courseText activeLinkThing">';   echo getCourseName($conn, $i);
+                                echo '</a>
+                            </div>
+                        </div>';
+                    } else{
+                        echo '              
+                        <div class="course">
+                            <div class="courseVis">
+                                <a href="main' . $i . '.php" class="courseText">';   echo getCourseName($conn, $i);
+                                echo '</a>
+                            </div>
+                        </div>';                        
+                    }
                 }                
             }
             ?>
